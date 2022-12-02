@@ -22,6 +22,10 @@ fun day1() {
         elves.add(calories)
 
     val max = elves.maxOrNull() ?: 0
-
     println("Max calories: $max")
+
+    val elvesOrdered = elves.sortedDescending()
+    val topThree = elvesOrdered.take(3)
+    val topThreeTotal = topThree.sum()
+    println("Total of top three calories: $topThreeTotal")
 }
